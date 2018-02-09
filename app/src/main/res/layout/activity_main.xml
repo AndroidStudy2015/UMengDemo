@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.umeng.www.umengdemo.MainActivity">
+
+    <Button
+        android:id="@+id/touzhu"
+        android:layout_width="match_parent"
+        android:text="投注"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/watch_movie"
+        android:layout_width="match_parent"
+        android:text="看电影"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/play_game"
+        android:layout_width="match_parent"
+        android:text="玩游戏"
+        android:layout_height="wrap_content"/>
+
+</android.support.v7.widget.LinearLayoutCompat>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    defaultConfig {
+        applicationId "com.umeng.www.umengdemo"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+    //友盟common
+    //    compile 'com.umeng.sdk:common:latest.integration'//这个与  implementation files('libs/umeng-common-1.4.3.jar') 重复了，会报错
+    //    compile 'com.umeng.sdk:analytics:latest.integration'//这个与    implementation files('libs/umeng-analytics-7.4.1.jar') 重复了 会报错
+    implementation files('libs/umeng-analytics-7.4.1.jar')
+    implementation files('libs/umeng-common-1.4.3.jar')
+    implementation files('libs/utdid4all-1.1.5.3_proguard.jar')
+    compile project(':push')
+    compile 'com.android.support:design:26.1.0'
+    //版本随意（非必须，引用可以解决无法预览问题）
+    implementation project(':refresh-header')
+    implementation project(':refresh-layout')
+}
